@@ -1,0 +1,47 @@
+<table class = "calculator" >
+    <tr>
+    <td colspan = "4"> <input class = "display-box" type = "text" id = "result" value = "{{display}}" disabled /> </td> 
+    </tr>
+
+    <tr>
+      <td> <button type = "button" [disabled] = "operator.length" (click) = "setOperation('percentile')"> % </button></td>
+      <td> <button type = "button" (click) = "removeAll()"> CE </button></td>
+      <td> <button type = "button" (click) = "removeAll()"> C </button></td>
+      <td> <button type = "button" (click) = "remove()"> del </button></td>
+    </tr>
+    
+    <tr>
+      <td> <button type = "button" [disabled] = "operator.length" (click) = "setOperation('reciprocal')"> 1/x </button></td>
+      <td> <button type = "button" [disabled] = "operator.length" (click) = "setOperation('square')"> x<sup>2</sup> </button></td>
+      <td> <button type = "button" [disabled] = "operator.length" (click) = "setOperation('sqrt')"> &#8730;x </button></td>
+      <td> <button type = "button" [disabled] = "operator.length" (click) = "setOperation('divide')"> / </button></td>
+    </tr>
+  
+    <tr>
+      <td> <button type = "button" (click) = "click(7)"> 7 </button></td>
+      <td> <button type = "button" (click) = "click(8)"> 8 </button></td>
+      <td> <button type = "button" (click) = "click(9)"> 9 </button></td>
+      <td> <button type = "button" [disabled] = "operator.length" (click) = "setOperation('multiply')"> X </button></td>
+    </tr>
+  
+    <tr>
+      <td> <button type = "button" (click) = "click(4)"> 4 </button></td>
+      <td> <button type = "button" (click) = "click(5)"> 5 </button></td>
+      <td> <button type = "button" (click) = "click(6)"> 6 </button></td>
+      <td> <button type = "button" [disabled] = "operator.length" (click) = "setOperation('subtract')"> - </button></td>
+    </tr>
+  
+    <tr>
+      <td> <button type = "button" (click) = "click(1)"> 1 </button></td>
+      <td> <button type = "button" (click) = "click(2)"> 2 </button></td>
+      <td> <button type = "button" (click) = "click(3)"> 3 </button></td>
+      <td> <button type = "button" [disabled] = "operator.length" (click) = "setOperation('add')"> + </button></td>
+    </tr>
+  
+    <tr>
+      <td> <button type = "button" [disabled] = "operator.length" (click) = "setOperation('invert')"> +/- </button></td>
+      <td> <button type = "button" (click) = "click(0)"> 0 </button></td>
+      <td> <button type = "button" (click) = "putPoint()"> . </button></td>
+      <td> <button type = "button" (click) = "evaluate()"> = </button></td>
+    </tr>
+    </table>
